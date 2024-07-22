@@ -14,12 +14,12 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
+
 	private double nota1;
 	private double nota2;
 	private double nota3;
 	private double nota4;
-	
+
 	public double getNota1() {
 		return nota1;
 	}
@@ -51,35 +51,55 @@ public class Aluno {
 	public void setNota4(double nota4) {
 		this.nota4 = nota4;
 	}
-	
+
 	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
 
-	/* Esses são os Construtores */ 
+	/* Método que retorna se o aluno está aprovado ou reprovado */
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/* Método que retorna se o aluno está aprovado ou reprovado Já com o tipo String */
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno está Aprovado";
+		} else {
+			return "Aluno está Reprovado";
+		}
+	}
+
+	/* Esses são os Construtores */
 	public Aluno() { /* Cria os dados na memoria - sendo padrão do Java */
 
 	}
 
 	public Aluno(String nomePadrao) {
-		nome = nomePadrao;		
+		nome = nomePadrao;
 	}
-	
+
 	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
 		idade = idadePadrao;
 	}
-	
+
 	/* Veremos os métodos SETTERS e GETTERS do Objeto */
 	/* SET é para adicionar ou receber dados para os atributos */
 	/* GET é para resgatar ou obter o valor do atributo */
-	
+
 	/* Recebe dados */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -154,5 +174,5 @@ public class Aluno {
 
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
-	}		
+	}
 }
