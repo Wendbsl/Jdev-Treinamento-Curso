@@ -52,31 +52,6 @@ public class Aluno {
 		this.nota4 = nota4;
 	}
 
-	/* Método que retorna a média do aluno */
-	public double getMediaNota() {
-		return (nota1 + nota2 + nota3 + nota4) / 4;
-	}
-
-	/* Método que retorna se o aluno está aprovado ou reprovado */
-	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota();
-		if (media >= 70) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	/* Método que retorna se o aluno está aprovado ou reprovado Já com o tipo String */
-	public String getAlunoAprovado2() {
-		double media = this.getMediaNota();
-		if (media >= 70) {
-			return "Aluno está Aprovado";
-		} else {
-			return "Aluno está Reprovado";
-		}
-	}
-
 	/* Esses são os Construtores */
 	public Aluno() { /* Cria os dados na memoria - sendo padrão do Java */
 
@@ -175,4 +150,38 @@ public class Aluno {
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
+	
+	/* Método que retorna a média do aluno */
+	public double getMediaNota() {
+		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+
+	/* Método que retorna se o aluno está aprovado ou reprovado */
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/* Método que retorna se o aluno está aprovado ou reprovado Já com o tipo String */
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno está Aprovado";
+		} else {
+			return "Aluno está Reprovado";
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + getNome() + ", idade=" + getIdade() + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}	
 }
