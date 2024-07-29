@@ -53,11 +53,11 @@ public class PrimeiraClasseJava {
 		System.out.println("Matricula é = " + aluno1.getDataMatricula());
 		System.out.println("Escola é = " + aluno1.getNomeEscola());
 		System.out.println("Série é = " + aluno1.getSerieMatriculado());
-		
+
 		System.out.println(aluno1); /* Descrição do objeto na memoria */
 		System.out.println("A média do aluno é = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado 2 = " + aluno1.getAlunoAprovado2());		
+		System.out.println("Resultado 2 = " + aluno1.getAlunoAprovado2());
 
 		System.out.println("-----------------------------------------------");
 
@@ -91,5 +91,21 @@ public class PrimeiraClasseJava {
 		System.out.println("Aluno 2 média é = " + aluno2.getMediaNota());
 		System.out.println("Aluno 2 Resultado = " + (aluno2.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
 		System.out.println("Aluno 2 Resultado 2 = " + aluno2.getAlunoAprovado2());
+		System.out.println("----------------------------------------------------");
+
+		/* Equals e hashcode (Diferenciar e comparar objetos) */
+
+		aluno1.setNome("Alex");
+		aluno1.setNumeroCpf("123");
+
+		aluno2.setNome("Alex");
+		aluno2.setNumeroCpf("123");
+
+		if (aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais");
+		} else {
+			System.out.println("Alunos não são iguais");
+		}
+
 	}
 }
