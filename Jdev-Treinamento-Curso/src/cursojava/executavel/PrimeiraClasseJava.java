@@ -20,10 +20,18 @@ public class PrimeiraClasseJava {
 		String pai = JOptionPane.showInputDialog("Qual o nome do pai ?");
 		String matricula = JOptionPane.showInputDialog("Qual a data da matricula ?");
 		String escola = JOptionPane.showInputDialog("Qual o nome da escola ?");
-		String serie = JOptionPane.showInputDialog("Qual a série = ");
+		String serie = JOptionPane.showInputDialog("Qual a série ?");
+		
+		String disciplina1 = JOptionPane.showInputDialog("Diciplina 1 ?");
 		String nota1 = JOptionPane.showInputDialog("Informe a nota 1 ?");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2 ?");
 		String nota2 = JOptionPane.showInputDialog("Informe a nota 2 ?");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3 ?");
 		String nota3 = JOptionPane.showInputDialog("Informe a nota 3 ?");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4 ?");
 		String nota4 = JOptionPane.showInputDialog("Informe a nota 4 ?");
 
 		Aluno aluno1 = new Aluno();
@@ -38,11 +46,17 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula(matricula);
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serie);
+		
 		aluno1.setNota1(Double.parseDouble(nota1));
 		aluno1.setNota2(Double.parseDouble(nota2));
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
-
+		
+		aluno1.setDisciplina1(disciplina1);
+		aluno1.setDisciplina2(disciplina2);
+		aluno1.setDisciplina3(disciplina3);
+		aluno1.setDisciplina4(disciplina4);
+		
 		System.out.println("Nome é = " + aluno1.getNome());
 		System.out.println("Idade é = " + aluno1.getIdade());
 		System.out.println("Nascimento é = " + aluno1.getDataNascimento());
