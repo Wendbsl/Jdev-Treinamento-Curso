@@ -48,15 +48,8 @@ public class PrimeiraClasseJava {
 		aluno1.setNomeEscola(escola);
 		aluno1.setSerieMatriculado(serie);
 		
-		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
-		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
 		
-		aluno1.getDisciplina().setDisciplina1(disciplina1);
-		aluno1.getDisciplina().setDisciplina2(disciplina2);
-		aluno1.getDisciplina().setDisciplina3(disciplina3);
-		aluno1.getDisciplina().setDisciplina4(disciplina4);
+		
 		
 		System.out.println("Nome é = " + aluno1.getNome());
 		System.out.println("Idade é = " + aluno1.getIdade());
@@ -88,11 +81,10 @@ public class PrimeiraClasseJava {
 		aluno2.setDataMatricula("20/04/2003");
 		aluno2.setNomeEscola("Escola Saint Frances");
 		aluno2.setSerieMatriculado("8");
-		aluno2.getDisciplina().setNota1(20.8);
-		aluno2.getDisciplina().setNota2(68.6);
-		aluno2.getDisciplina().setNota3(88.2);
-		aluno2.getDisciplina().setNota4(98.8);
-
+		
+		
+		
+		
 		System.out.println("Aluno 2 Nome é = " + aluno2.getNome());
 		System.out.println("Aluno 2 Idade é = " + aluno2.getIdade());
 		System.out.println("Aluno 2 Nascimento é = " + aluno2.getDataNascimento());

@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /* Está é nossa classe / Objeto que representa o Aluno */
@@ -17,16 +19,15 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	private Disciplina disciplina = new Disciplina();
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
 	}
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
-	
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}	
 	
 	/* Esses são os Construtores */
 	public Aluno() { /* Cria os dados na memoria - sendo padrão do Java */
@@ -129,8 +130,7 @@ public class Aluno {
 	
 	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() 
-		+ disciplina.getNota3() + disciplina.getNota4()) / 4;
+		return 0;
 	}
 
 	/* Método que retorna se o aluno está aprovado ou reprovado */
@@ -175,7 +175,6 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
-	}	
-	
+				+ serieMatriculado + "]";
+	}		
 }
